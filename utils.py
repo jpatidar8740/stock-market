@@ -23,10 +23,10 @@ New val based on return and var upto last day(today variations are not playing a
 It is not used at start of trading because High and Low will be same as new_val, so a different is handling that case.
 '''
 def update_data(stk):
-    print(stk)
+    #print(stk)
     curr_val = stk['Curr']
     new_val = curr_val*np.exp((stk['mean']-(1/2)*(stk['var'])**2) + stk['var']*np.random.normal(0, 1))
-    print(new_val)
+    #print(new_val)
     open_val = stk['Open']
     high = max(new_val, stk['High'])
     low = min(new_val, stk['Low'])
